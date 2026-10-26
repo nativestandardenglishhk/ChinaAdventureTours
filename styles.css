@@ -167,13 +167,13 @@ header {
 .nav-links {
   display: flex;
   list-style: none;
-  gap: 1.5rem;
+  gap: 1.15rem;
 }
 
 .nav-links a {
   text-decoration: none;
   font-weight: 600;
-  font-size: 0.92rem;
+  font-size: 0.88rem;
   color: var(--teal-deep);
 }
 
@@ -230,13 +230,14 @@ header {
 
 .hero h1 {
   color: var(--white);
-  font-size: clamp(2.6rem, 6vw, 4.4rem);
-  max-width: 11ch;
+  font-size: clamp(1.85rem, 4.2vw, 3.15rem);
+  max-width: 22ch;
   margin-bottom: 1rem;
+  line-height: 1.18;
 }
 
 .hero-lead {
-  max-width: 34rem;
+  max-width: 38rem;
   font-size: 1.08rem;
   color: var(--cream);
   margin-bottom: 1.75rem;
@@ -298,6 +299,174 @@ header {
   height: 100%;
   object-fit: cover;
   aspect-ratio: 4 / 3;
+}
+
+/* Journeys */
+.journeys {
+  padding: 1rem 0 5rem;
+  background: var(--cream-soft);
+}
+
+.journey-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.35rem;
+}
+
+.journey-card {
+  background: var(--white);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+}
+
+.journey-priority,
+.journey-signature {
+  grid-column: span 2;
+  display: grid;
+  grid-template-columns: 1.05fr 1fr;
+}
+
+.journey-media {
+  position: relative;
+  overflow: hidden;
+}
+
+.journey-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  aspect-ratio: 16 / 11;
+  min-height: 14rem;
+}
+
+.journey-priority .journey-media img,
+.journey-signature .journey-media img {
+  aspect-ratio: auto;
+  min-height: 100%;
+}
+
+.journey-badge {
+  position: absolute;
+  top: 0.9rem;
+  left: 0.9rem;
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-weight: 700;
+  background: var(--gold);
+  color: var(--teal-deep);
+  padding: 0.35rem 0.65rem;
+  border-radius: 999px;
+}
+
+.journey-badge-sig {
+  background: var(--teal);
+  color: var(--gold-soft);
+}
+
+.journey-body {
+  padding: 1.35rem 1.4rem 1.55rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+
+.duration-badge {
+  display: inline-block;
+  align-self: flex-start;
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--teal);
+  background: rgba(18, 78, 78, 0.08);
+  padding: 0.3rem 0.6rem;
+  border-radius: 999px;
+}
+
+.journey-body h3 {
+  font-size: clamp(1.45rem, 2.4vw, 1.85rem);
+}
+
+.beat-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  margin: 0.25rem 0 0.35rem;
+}
+
+.beat-list li {
+  position: relative;
+  padding-left: 1rem;
+  color: var(--muted);
+  font-size: 0.93rem;
+  line-height: 1.45;
+}
+
+.beat-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 0.4rem;
+  height: 0.4rem;
+  border-radius: 50%;
+  background: var(--gold);
+}
+
+.lodging-line,
+.for-line {
+  font-size: 0.9rem;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.lodging-line strong,
+.for-line strong {
+  color: var(--teal-deep);
+  font-weight: 700;
+}
+
+/* Stays */
+.stays {
+  padding: 0 0 5rem;
+  background: var(--cream-soft);
+}
+
+.stays-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.15rem;
+}
+
+.stay-tile {
+  background: linear-gradient(160deg, var(--teal-deep), var(--teal));
+  color: var(--cream);
+  border-radius: var(--radius);
+  padding: 1.7rem 1.45rem 1.8rem;
+  box-shadow: var(--shadow);
+}
+
+.stay-icon {
+  display: block;
+  color: var(--gold);
+  font-size: 1.1rem;
+  margin-bottom: 0.85rem;
+}
+
+.stay-tile h3 {
+  color: var(--white);
+  font-size: 1.45rem;
+  margin-bottom: 0.55rem;
+}
+
+.stay-tile p {
+  color: rgba(245, 236, 220, 0.88);
+  font-size: 0.95rem;
 }
 
 /* Destinations */
@@ -378,6 +547,18 @@ header {
 .dest-body p {
   color: var(--muted);
   font-size: 0.95rem;
+}
+
+.dest-body a {
+  color: var(--teal);
+  font-weight: 700;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(18, 78, 78, 0.25);
+}
+
+.dest-body a:hover {
+  color: var(--teal-mid);
+  border-bottom-color: var(--gold);
 }
 
 .dest-tag-soon {
@@ -472,7 +653,7 @@ header {
 }
 
 .contact-inner p {
-  max-width: 36rem;
+  max-width: 40rem;
   margin: 0 auto 1.6rem;
   color: rgba(245, 236, 220, 0.9);
 }
@@ -511,6 +692,11 @@ header {
   font-size: 1.15rem;
 }
 
+.footer-links {
+  display: flex;
+  gap: 1.25rem;
+}
+
 .footer a {
   font-weight: 700;
   color: var(--teal);
@@ -522,7 +708,7 @@ header {
 }
 
 /* Mobile */
-@media (max-width: 900px) {
+@media (max-width: 980px) {
   .nav-cta {
     display: none;
   }
@@ -555,7 +741,18 @@ header {
   }
 
   .about-grid,
-  .steps {
+  .steps,
+  .stays-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .journey-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .journey-priority,
+  .journey-signature {
+    grid-column: auto;
     grid-template-columns: 1fr;
   }
 
@@ -575,11 +772,12 @@ header {
 
 @media (max-width: 560px) {
   .hero {
-    min-height: 34rem;
+    min-height: 36rem;
   }
 
   .hero h1 {
     max-width: none;
+    font-size: clamp(1.65rem, 7vw, 2.2rem);
   }
 
   .footer-inner {
