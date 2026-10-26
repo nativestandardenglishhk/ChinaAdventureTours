@@ -380,6 +380,37 @@ header {
   font-size: 0.95rem;
 }
 
+.dest-tag-soon {
+  color: var(--muted);
+  background: rgba(92, 107, 107, 0.12);
+}
+
+.dest-placeholder {
+  border: 1px dashed rgba(18, 78, 78, 0.22);
+  box-shadow: none;
+  background: rgba(255, 255, 255, 0.72);
+}
+
+.dest-placeholder-media {
+  aspect-ratio: 4 / 3;
+  display: grid;
+  place-items: center;
+  background:
+    linear-gradient(135deg, rgba(18, 78, 78, 0.12), rgba(212, 175, 110, 0.18)),
+    repeating-linear-gradient(
+      -45deg,
+      transparent,
+      transparent 10px,
+      rgba(18, 78, 78, 0.04) 10px,
+      rgba(18, 78, 78, 0.04) 20px
+    );
+  color: var(--muted);
+  font-size: 0.8rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
 /* How */
 .how {
   padding: 5rem 0;
